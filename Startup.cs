@@ -4,7 +4,7 @@ namespace GitExercise
 {
     public class Startup
     {
-        public static void Main()
+        public static async void Main()
         {
             bool isAuthorized = CheckCreditentials();
 
@@ -53,14 +53,15 @@ namespace GitExercise
                 case "m":
                     OptionsManager.Multiply(a, b);
                     break;
-                case "dr":
-                    OptionsManager.DivideReminder(a, b);
+                case "pow":
+                    OptionsManager.Power(a, b);
                     break;
-                case "ex":
-                    Console.Clear();
-                    Console.WriteLine("Goodbye");
-                    Console.ReadKey(intercept: true);
-                    return;
+                case "log":
+                    OptionsManager.Log(a, b);
+                    break;
+                case "fact":
+                    OptionsManager.Factorial(a, b);
+                    break;
             }
 
             Console.WriteLine("Pres any key to close the app...");

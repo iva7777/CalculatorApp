@@ -1,1 +1,2 @@
 # GitExercise
+Simple Calculator App

@@ -17,6 +17,14 @@ namespace GitExercise
             Console.WriteLine("Console Calculator App");
             Console.WriteLine(new string(c:'-', count: 15));
 
+
+            while(true)
+            {
+                Console.Clear();
+                Console.WriteLine("Console Calculator App");
+                Console.WriteLine(new string(c: '-', count: 15));
+            }
+
             Console.Write("a = ");
             double a = double.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
 
@@ -45,16 +53,18 @@ namespace GitExercise
                 case "m":
                     OptionsManager.Multiply(a, b);
                     break;
-                case "d":
-                    OptionsManager.Divide(a, b);
+                case "dr":
+                    OptionsManager.DivideReminder(a, b);
                     break;
-                case "sabs":
-                    OptionsManager.SubstractAbs(a, b);
-                    break;
+                case "ex":
+                    Console.Clear();
+                    Console.WriteLine("Goodbye");
+                    Console.ReadKey(intercept: true);
+                    return;
             }
 
             Console.WriteLine("Pres any key to close the app...");
-            Console.ReadKey(true);
+            Console.ReadKey(intercept: true);
         }
 
         private static bool CheckCreditentials()

@@ -74,7 +74,7 @@ namespace GitExercise
             string password = Console.ReadLine();
             Console.Clear();
 
-            return password == password;
+            return password == Password;
         }
 
         private const string Password = "abcd1234";
